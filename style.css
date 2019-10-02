@@ -1,0 +1,22 @@
+.app{
+    display: inline-block;
+    margin: auto;
+    background: rgba(255, 166, 0, 0.762);
+}
+
+/* body{
+    background-color: rgba(233, 199, 59, 0.975);
+} */
+
+.row{
+    border: 3px black solid;
+    height: 100px;
+    width:460px;
+    text-align: right;
+    background-color: black;
+}
+
+.col {
+    color: rgb(254, 189, 69);
+}
+

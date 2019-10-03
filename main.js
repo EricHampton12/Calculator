@@ -1,14 +1,17 @@
 var app = document.getElementById('app');
 app.setAttribute('class', 'container');
 
+oldNum = "";
+newNum = "";
 var screen;
 var updater = 0;
 var display = document.createElement('div');
 var elements = ["Clear", " ", " ", "/", "7", "8", "9", "*", "4", "5", "6", "-", "1", "2", "3", "+", "0", " ", ".", "="];
 var whatPressed = this.id;
+var operator;
 
 
-function what_pressed(){
+function what_pressed() {
     display = document.innerHTML(this.innerHTML);
 }
 
@@ -33,17 +36,17 @@ function render_page() {
     myContainer.setAttribute('class', 'container bg-dark');
 
     var myRow = '';
-    
 
-    for(var i = 0; i < 20; i++){
-        
-    
-        if(i % 4 == 0){
+
+    for (var i = 0; i < 20; i++) {
+
+
+        if (i % 4 == 0) {
             myRow = document.createElement('div');
             myRow.setAttribute('class', 'row');
 
         }
-        
+
         var myCol = document.createElement('div');
         myCol.setAttribute('class', 'col-3 px-3 py-3 text-center border border-dark');
         var btn = document.createElement('button');
@@ -54,13 +57,13 @@ function render_page() {
         myCol.appendChild(btn);
         myRow.appendChild(myCol);
 
-        if((i % 4) - 3 == 0){
+        if ((i % 4) - 3 == 0) {
 
-            
+
         }
-        
-        
-        
+
+
+
         app.appendChild(myContainer);
         myContainer.appendChild(myRow);
         app.appendChild(myRow);
@@ -72,16 +75,37 @@ function render_page() {
 
 }
 
+function calculator(operator) {
+    switch (operator) {
+        case "/":
+        return oldNum / newNum;
+        break;
+
+        case "*":
+            return oldNum * newNum;
+            break;
+
+        case "-":
+            return oldNum - newNume;
+            break;
+
+        case "+":
+            return oldNum + newNum;
+            break;
+
+    }
+}
+
 
 
 function which_button() {
- console.log(this.innerHTML)
+    console.log(this.innerHTML)
 
 
 
 }
 
- 
+
 
 
 

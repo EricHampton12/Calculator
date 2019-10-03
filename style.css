@@ -10,13 +10,17 @@
 
 .row{
     border: 3px black solid;
-    height: 100px;
-    width:460px;
     text-align: right;
     background-color: black;
 }
 
 .col {
     color: rgb(254, 189, 69);
+}
+
+#screen {
+    color: rgb(81, 67, 210);
+    height: 60px;
+    
 }
 

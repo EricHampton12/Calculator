@@ -3,12 +3,13 @@ app.setAttribute('class', 'container');
 
 oldNum = "";
 newNum = "";
+newInput = 0;
 var screen;
-var updater = 0;
+var count = "";
 var display = document.createElement('div');
 var elements = ["Clear", " ", " ", "/", "7", "8", "9", "*", "4", "5", "6", "-", "1", "2", "3", "+", "0", " ", ".", "="];
 var whatPressed = this.id;
-var operator;
+var operator = "";
 
 
 function what_pressed() {
@@ -99,10 +100,45 @@ function calculator(operator) {
 
 
 function which_button() {
+    btn = (this.id);
+
+    switch(btn){
+        case 'Clear':
+            operator = "";
+            oldNum = 0;
+            newNum = 0;
+            screen = 0;
+            count = 0;
+            newInput = 0;
+            break;
+
+        case '/': 
+        case '*':
+        case '-':
+        case '+':
+
+        if(operator != " "){
+            calculate()
+        }
+
+        oldNum = newInput;
+        newInput = 0;
+        operator = btn;
+        break;
+
+        case '=':
+            calculate();
+            break;
+            
+            
+    }
     console.log(this.innerHTML)
 
 
 
+}
+
+function calculate(){
 }
 
 
